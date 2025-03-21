@@ -6,14 +6,6 @@ import os
 # Page configuration
 st.set_page_config(page_title="ML Portfolio", layout="wide")
 
-import streamlit as st
-
-# Save file in a temporary directory
-save_path = os.path.join("temp", "img.jpg")
-os.makedirs("temp", exist_ok=True)  # Create temp folder if not exists
-
-
-
 # Sidebar Navigation
 st.sidebar.title("Navigation")
 page = st.sidebar.selectbox("Go to", ["Home", "Projects", "Model Demo", "Visualizations", "Contact", "Test"])
