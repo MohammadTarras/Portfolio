@@ -2,8 +2,17 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
+import os
 # Page configuration
 st.set_page_config(page_title="ML Portfolio", layout="wide")
+
+import streamlit as st
+
+# Save file in a temporary directory
+save_path = os.path.join("temp", "img.jpg")
+os.makedirs("temp", exist_ok=True)  # Create temp folder if not exists
+
+
 
 # Sidebar Navigation
 st.sidebar.title("Navigation")
@@ -13,7 +22,7 @@ page = st.sidebar.selectbox("Go to", ["Home", "Projects", "Model Demo", "Visuali
 if page == "Home":
     st.title("Welcome to My Machine Learning Portfolio")
     st.write("This portfolio showcases my ML projects, interactive demos, and insights.")
-    st.image("C:/Users/USER/OneDrive - American University of Beirut/Desktop/Learn Streamlit/img.jpg", use_container_width=True)
+    st.image("temp/img.jpg", use_container_width=True)
 
 # Projects Page
 elif page == "Projects":
